@@ -140,6 +140,18 @@ s<!DOCTYPE html>
       //bet yra 50% tikimybė (pasinaudokite rand() funkcija tikimybei sumodeliuoti),
       //kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
 
+      let ikalta = 0;
+      let kartu = 0;
+
+      while(true) {
+        ikalta += rand(5, 20)
+        kartu++;
+        if (ikalta >= 85 * 5) {
+          document.write (`Penki vinys įkalti per ${kartu} <br />`);
+          break;
+        }
+      }
+
 
 
     </script>
