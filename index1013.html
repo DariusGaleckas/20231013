@@ -147,10 +147,27 @@ s<!DOCTYPE html>
         ikalta += rand(5, 20)
         kartu++;
         if (ikalta >= 85 * 5) {
-          document.write (`Penki vinys įkalti per ${kartu} <br />`);
           break;
         }
       }
+      document.write (`Penki vinys įkalti per ${kartu} <br />`);
+
+
+      let ikalta1 = 0;
+      let kartu1 = 0;
+
+      while (true) {
+        if (rand(0, 1)) {
+          ikalta1 += rand(20,30);
+        }
+        kartu1++;
+
+        if (ikalta1 >= 85 *5) {
+          break;
+        }
+      }
+      document.write (`Vinis įkaltas per ${kartu1}`);
+
 
 
 
