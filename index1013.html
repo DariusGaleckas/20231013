@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
 
       let i = 1;
       let rez = "";
-      dydis = `100`
+      dydis = `100`;
 
       while (i <= dydis) {
         rez += `* `;
@@ -30,16 +30,115 @@
       document.write(rez);
       //rez += * + ` `
       //pridėti tarpus po "*", po paskutinio "*" nuimti tarpą.
-      
+
       //Antra užduotis
-      document.write(`<h2>Antra užduotis</h2>`);
+      document.write(`<h2>Antra užduotiss</h2>`);
+      i = 0;
+      let line = 1;
+      let number = 0;
+      let x = ``;
+
+      while (i < 10000) {
+        number = number === 100 ? 0 : number;
+        i++;
+        number++;
+
+        if (line === number || 100 - line + 1 === number) {
+          document.write(`<span style="color:red">*</span>`);
+        } else {
+          document.write(`*`);
+        }
+
+        if (i % 100 === 0) {
+          document.write(`<br />`);
+          line++;
+        }
+      }
+
+      //Antra + 1 užduotis
+      document.write(`<h2>Antra + 1 užduotis</h2>`);
+
+      let y = 1;
+      rez = ``;
+      let size = 5;
+      while (y <= size) {
+        let x = 1; //3
+        //rez += "*";
+        while (x <= size) {
+          if (x === y || x === size - y + 1)
+            rez += `<span style = "color:red">*</span>`;
+          else rez += `*`;
+          x++;
+        }
+        rez += `<br/>`;
+        y++;
+      }
+      document.write(rez);
 
       //sujungti Pirmą elementą (pirmoje eilutėje) ir (paskutinį elementą paskutinėje eilutėje)
       //sujungti paskutinį elementą pirmoje eilutėje su pirmu elementu paskutinėje eilutėje
-      
 
       //Trečia užduotis
+      document.write(`<h2>Tečia užduotis</h2>`);
 
+      //Metam monetą. Monetos kritimo rezultatą imituojam rand() funkcija,
+      // kur 0 yra herbas, o 1 - skaičius.
+      // Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje:
+      // “S” jeigu iškrito skaičius ir “H” jeigu herbas.
+      // Suprogramuokite tris skirtingus scenarijus kai monetos metimą stabdome:
+      //Iškritus herbui;
+      //  Tris kartus iškritus herbui;
+      //Tris kartus iš eilės iškritus herbui;
+
+      //Ketvirta užduotis
+      document.write(`<h2>Ketvirta užduotis</h2>`);
+
+      //Kazys ir Petras žaidžiai šaškėm.
+      // Petras surenka taškų kiekį nuo 10 iki 20,
+      // Kazys surenka taškų kiekį nuo 5 iki 25.
+      //Vienoje eilutėje išvesti žaidėjų vardus su taškų kiekiu ir
+      //“Partiją laimėjo: ​laimėtojo vardas​”.
+      //Taškų kiekį generuokite funkcija ​rand()​.
+      // Žaidimą laimi tas, kas greičiau surenka 222 taškus.
+      // Partijas kartoti tol, kol kažkuris žaidėjas pirmas surenka 222 arba daugiau taškų.
+
+      let kazys = 0;
+      let petras = 0;
+
+      while (true) {
+        kazys += rand(10, 20);
+        petras += rand(5, 25);
+
+        if (petras === kazys && kazys >= 222 && petras >= 222) {
+          document.write(`Kazys: ${kazys} Petras: ${petras} <br />`);
+          break;
+        }
+        if (kazys >= 222) {
+          document.write(`Kazys: ${kazys} Petras: ${petras} <br />`);
+
+          document.write(`Laimėjo Kazys`);
+          break;
+        }
+        if (petras >= 222) {
+          document.write(`Kazys: ${kazys} Petras: ${petras} <br />`);
+
+          document.write(`Laimėjo Petras`);
+          break;
+        }
+      }
+
+      //Penkta užduotis
+      document.write(`<h2>Penkta užduotis</h2>`);
+
+      //Sumodeliuokite vinies kalimą. 
+      //Įkalimo gylį sumodeliuokite pasinaudodami rand() funkcija.
+      //Vinnies ilgis 8.5cm (pilnai sulenda į lentą).
+      //“Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. 
+      //Suskaičiuokite kiek reikia smūgių.
+      //“Įkalkite” 5 vinis dideliais smūgiais.
+      //Vienas smūgis vinį įkala 20-30 mm, 
+      //bet yra 50% tikimybė (pasinaudokite rand() funkcija tikimybei sumodeliuoti),
+      //kad smūgis nepataikys į vinį. Suskaičiuokite kiek reikia smūgių.
 
 
 
